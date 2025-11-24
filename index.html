@@ -4,63 +4,107 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Renderings</title>
+  <title>Portfolio Gustav Karl Schröter</title>
+  <meta name="description" content="Portfolio von Gustav Karl Schröter — Bilder und Renderings" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body{margin:0;font-family:Arial, sans-serif;background:#f5f5f5;color:#222}
-    header{padding:16px;background:#111;color:white;display:flex;gap:20px;font-size:18px}
-    header a{color:white;text-decoration:none}
-    .grid{max-width:1100px;margin:30px auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;padding:0 20px}
-    .item{background:white;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.15)}
-    .item img{width:100%;display:block}
-    .desc{padding:10px;font-size:14px;color:#444}
+    body { font-family: 'Inter', sans-serif; margin: 0; padding: 40px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #333; line-height: 1.6; }
+    h1 { color: #2c3e50; font-weight: 600; }
+    h2 { color: #34495e; font-weight: 600; }
+    .tabs { margin-bottom: 30px; display: flex; justify-content: center; }
+    .tab-button { padding: 12px 24px; border: 1px solid #bdc3c7; background: #ecf0f1; cursor: pointer; margin-right: 10px; border-radius: 8px; transition: all 0.3s ease; }
+    .tab-button.active { background: #3498db; color: white; box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4); }
+    .tab-button:hover { background: #95a5a6; color: white; }
+    .tab-content { display: none; margin-top: 20px; }
+    .tab-content.active { display: block; }
+    .gallery { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .gallery-item { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; }
+    .gallery-item:hover { transform: scale(1.05); }
+    .gallery-item img { max-width: 250px; height: auto; display: block; }
+    footer { margin-top: 50px; text-align: center; color: #7f8c8d; }
+    @media (max-width: 768px) {
+      body { padding: 20px; }
+      .gallery { grid-template-columns: 1fr 1fr; gap: 10px; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <a href="renderings.html">Renderings</a>
-    <a href="fotos.html">Fotos</a>
-  </header>
+  <h1>Gustav Karl Schröter</h1>
+  <p>Portfolio mit Bildern und Renderings meiner Projekte.</p>
 
-  <div class="grid">
-    <!-- Beispiel-Item -->
-    <div class="item">
-      <img src="img/rendering1.jpg" alt="Rendering 1" />
-      <div class="desc">Kurze Beschreibung zum Rendering.</div>
+  <div class="tabs">
+    <button class="tab-button active" onclick="showTab('bilder')">Bilder</button>
+    <button class="tab-button" onclick="showTab('renderings')">Renderings</button>
+  </div>
+
+  <div id="bilder" class="tab-content active">
+    <h2>Bilder</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x200/ff6b6b/ffffff?text=Bild+1" alt="Bild 1">
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x200/4ecdc4/ffffff?text=Bild+2" alt="Bild 2">
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x200/45b7d1/ffffff?text=Bild+3" alt="Bild 3">
+      </div>
+    </div>
+  </div>
+
+  <div id="renderings" class="tab-content">
+    <h2>Renderings</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x200/f72585/ffffff?text=Rendering+1" alt="Rendering 1">
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x200/b5179e/ffffff?text=Rendering+2" alt="Rendering 2">
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x200/7209b7/ffffff?text=Rendering+3" alt="Rendering 3">
+      </div>
     </div>
   </div>
 </body>
 </html>
 
+  <h2>Kontakt</h2>
+  <p>E-Mail: gustav@example.com</p>
+  <footer>© Gustav Karl Schröter {new Date().getFullYear()}</footer>
 
-<!-- fotos.html -->
-<!doctype html>
-<html lang="de">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fotos</title>
-  <style>
-    body{margin:0;font-family:Arial, sans-serif;background:#f5f5f5;color:#222}
-    header{padding:16px;background:#111;color:white;display:flex;gap:20px;font-size:18px}
-    header a{color:white;text-decoration:none}
-    .grid{max-width:1100px;margin:30px auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;padding:0 20px}
-    .item{background:white;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.15)}
-    .item img{width:100%;display:block}
-    .desc{padding:10px;font-size:14px;color:#444}
-  </style>
-</head>
-<body>
-  <header>
-    <a href="renderings.html">Renderings</a>
-    <a href="fotos.html">Fotos</a>
-  </header>
+  <script>
+    function showTab(tabId) {
+      // Hide all tab contents
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.classList.remove('active'));
 
-  <div class="grid">
-    <!-- Beispiel-Item -->
-    <div class="item">
-      <img src="img/foto1.jpg" alt="Foto 1" />
-      <div class="desc">Kurze Beschreibung zum Foto.</div>
-    </div>
-  </div>
+      // Remove active class from all buttons
+      const buttons = document.querySelectorAll('.tab-button');
+      buttons.forEach(button => button.classList.remove('active'));
+
+      // Show selected tab content
+      document.getElementById(tabId).classList.add('active');
+
+      // Add active class to clicked button
+      event.target.classList.add('active');
+    }
+
+    function sendMessage(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      if(!name||!email||!msg){ alert('Bitte alle Felder ausfüllen.'); return }
+      const subject = encodeURIComponent('Kontakt über Portfolio von ' + name);
+      const body = encodeURIComponent('Name: '+name+'\nE‑Mail: '+email+'\n\n'+msg);
+      window.location.href = `mailto:gustav@example.com?subject=${subject}&body=${body}`;
+    }
+
+    (function(){
+      const footer = document.querySelector('footer div');
+      if(footer) footer.innerHTML = `© <strong>Gustav Karl Schröter</strong> — ${new Date().getFullYear()}`;
+    })();
+  </script>
 </body>
 </html>
