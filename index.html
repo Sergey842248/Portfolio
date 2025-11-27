@@ -17,9 +17,10 @@
     .tab-content { display: none; margin-top: 20px; }
     .tab-content.active { display: block; }
     .gallery { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-    .gallery-item { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; position: relative; cursor: pointer; }
+    .gallery-item { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 300px; height: 300px; }
     .gallery-item:hover { transform: scale(1.05); }
-    .gallery-item img { max-width: 250px; height: auto; display: block; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: contain; }
+    .gallery-item video { width: 100%; height: 100%; object-fit: contain; }
     .gallery-item p { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.8); color: white; padding: 10px; margin: 0; opacity: 0; transition: opacity 0.3s ease; }
     .gallery-item:hover p { opacity: 1; }
     footer { margin-top: 50px; text-align: center; color: #7f8c8d; }
@@ -177,13 +178,13 @@
     <h2>Renderings</h2>
     <div class="gallery">
       <div class="gallery-item">
-       <video src="https://gustavschroeter.github.io/Portfolio/Iphone_ad.mp4" autoplay muted loop style="max-width:250px; height:auto; display:block;"></video>
-        <p>Oktober 2025 
+       <video src="https://gustavschroeter.github.io/Portfolio/Iphone_ad.mp4" autoplay muted loop></video>
+        <p>Oktober 2025
           Software: Blender, Premiere Pro
         </p>
       </div>
       <div class="gallery-item">
-        <video src="https://gustavschroeter.github.io/Portfolio/portal-fertig.mp4" autoplay muted loop style="max-width:250px; height:auto; display:block;"></video>
+        <video src="https://gustavschroeter.github.io/Portfolio/portal-fertig.mp4" autoplay muted loop></video>
         <p>Juli 2024
           Software: Blender, After Effects
         </p>
@@ -213,13 +214,13 @@
         </p>
       </div>
       <div class="gallery-item">
-        <video src="https://gustavschroeter.github.io/Portfolio/20220820_075537000_iOS.MOV" autoplay muted loop style="max-width:250px; height:auto; display:block;"></video>
+        <video src="https://gustavschroeter.github.io/Portfolio/20220820_075537000_iOS.MOV" autoplay muted loop></video>
         <p>August 2022
           Software: Blender
         </p>
       </div>
       <div class="gallery-item">
-        <video src="https://gustavschroeter.github.io/Portfolio/5755F3B9-6BD0-4240-AF93-8EC755F5A1A4.MOV" autoplay muted loop style="max-width:250px; height:auto; display:block;"></video>
+        <video src="https://gustavschroeter.github.io/Portfolio/5755F3B9-6BD0-4240-AF93-8EC755F5A1A4.MOV" autoplay muted loop></video>
         <p>August 2022
           Software: Blender
         </p>
