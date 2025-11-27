@@ -298,8 +298,34 @@
       const lightboxImg = document.getElementById('lightbox-img');
       const lightboxVideo = document.getElementById('lightbox-video');
 
+      let isScrolling = false;
+      let scrollTimer;
+
+      // Detect scrolling on mobile devices
+      document.addEventListener('touchmove', function() {
+        isScrolling = true;
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+          isScrolling = false;
+        }, 150); // Delay to allow for proper tap detection
+      });
+
+      document.addEventListener('touchend', function() {
+        clearTimeout(scrollTimer);
+        if (!isScrolling) {
+          // Allow tap after a brief delay to ensure it wasn't during scroll
+        }
+      });
+
       galleryItems.forEach(item => {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', function(e) {
+          // Prevent accidental clicks while scrolling on mobile
+          if (isScrolling) {
+            e.preventDefault();
+            e.stopPropagation();
+            return;
+          }
+
           const img = item.querySelector('img');
           const video = item.querySelector('video');
 
@@ -318,6 +344,12 @@
           }
 
           modal.style.display = 'flex';
+        });
+
+        // Prevent context menu on long press (mobile)
+        item.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+          return false;
         });
       });
 
